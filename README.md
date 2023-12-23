@@ -33,7 +33,7 @@ This is a simple RESTful API built with Express.js and MongoDB that allows perfo
 2. Open the .env file and provide the following information:
 
 ```bash
-MONGOURI=<user>:<password>@<clustername>
+MONGOURI=<user>:<password>
 JWT_key="your key"
 ```
 ### Running the API
