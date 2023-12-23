@@ -160,6 +160,7 @@ npm start
 1. Start the application
 2. Open Postman and import the provided collection file
 3. The collection includes pre-configured requests for each API endpoint. You can send requests to the corresponding endpoints and examine the responses.
+4. you can check the hosted server in postman by replacing http://localhost:3000 by https://quiz-app-backend-uj0z.onrender.com
 
 **Note**: Make sure to update the request URLs and data as needed based on your local environment and specific API configurations.
 ## Authors
