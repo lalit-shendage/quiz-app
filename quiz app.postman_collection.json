@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "f97441b0-3dca-4705-a6f2-103cbbf49f15",
+		"name": "quiz app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26585164"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"12345\",\r\n  \"role\": \"admin\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"12345\"\r\n}"
+						},
+						"url": "http://localhost:3000/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quiz",
+			"item": [
+				{
+					"name": "create quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg1NjM5OTQ3ZjNmYWY0ODI5NDU1MTMiLCJpYXQiOjE3MDMzMDU3MzksImV4cCI6MTcwMzMwOTMzOX0.0evw8I2iSeXrfhhMM0DrSuDV9W6MoOF7czhJUixoEo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Math Quiz\",\r\n  \"questions\": [\r\n    {\r\n      \"text\": \"What is 2 + 2?\",\r\n      \"options\": [\"3\", \"4\", \"5\", \"6\"],\r\n      \"rightAnswer\": 1\r\n    },\r\n    {\r\n      \"text\": \"What is 9 * 7?\",\r\n      \"options\": [\"30\", \"35\", \"40\", \"45\"],\r\n      \"rightAnswer\": 3\r\n    }\r\n  ],\r\n  \"startDate\": \"2023-12-23T05:30:00.000Z\",\r\n  \"endDate\": \"2023-12-23T06:00:00.000Z\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/quizzes"
+					},
+					"response": []
+				},
+				{
+					"name": "get all quizes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg1NjM5OTQ3ZjNmYWY0ODI5NDU1MTMiLCJpYXQiOjE3MDMzMDU3MzksImV4cCI6MTcwMzMwOTMzOX0.0evw8I2iSeXrfhhMM0DrSuDV9W6MoOF7czhJUixoEo8",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/quizzes/all"
+					},
+					"response": []
+				},
+				{
+					"name": "get active quizes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg1NjM5OTQ3ZjNmYWY0ODI5NDU1MTMiLCJpYXQiOjE3MDMzMDU3MzksImV4cCI6MTcwMzMwOTMzOX0.0evw8I2iSeXrfhhMM0DrSuDV9W6MoOF7czhJUixoEo8",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/quizzes/active"
+					},
+					"response": []
+				},
+				{
+					"name": "participate in quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg2NjFmMzQ3ZjNmYWY0ODI5NDU1MTkiLCJpYXQiOjE3MDMzMDY0MTUsImV4cCI6MTcwMzMxMDAxNX0.1WoKfLPwjxmgyAsSbp2GD4i8HJ2G1TNFb2oVyGNPBys",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quizId\": \"65866d94ff28b05f7afd29c4\",\r\n  \"selectedOptions\": [1, 2]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/quizzes/participate"
+					},
+					"response": []
+				},
+				{
+					"name": "get quiz result",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg2NjFmMzQ3ZjNmYWY0ODI5NDU1MTkiLCJpYXQiOjE3MDMzMDcxNDIsImV4cCI6MTcwMzMxMDc0Mn0.UDRpQOzmoivnY7G949b0qtWHS59qk2W8AnKdswRa2vs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/quizzes/65866d94ff28b05f7afd29c4/result"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
