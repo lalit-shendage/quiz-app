@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-user=process.env.mongoURI
+user=process.env.MONGOURI
 
 module.exports = async () => {
   try {
